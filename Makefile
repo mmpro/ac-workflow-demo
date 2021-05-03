@@ -1,6 +1,9 @@
 commit:
 	@node ./node_modules/ac-semantic-release/lib/commit.js
 
+release:
+	@node ./node_modules/ac-semantic-release/lib/release.js	
+
 test-local:
 	@echo "LOCAL TESTING"
 	#rm -f error.log
