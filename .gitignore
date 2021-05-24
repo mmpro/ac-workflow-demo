@@ -6,4 +6,6 @@ logs
 coverage
 node_modules/**
 .idea/**
+
+.jenkins.conf
 report.xml

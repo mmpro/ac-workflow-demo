@@ -1,6 +1,0 @@
-<testsuites name="WorkFlow Demo">
-  <testsuite name="Run tests" tests="1" errors="0" failures="0" skipped="0" timestamp="2021-05-03T14:27:18" time="0.004">
-    <testcase classname="WorkFlow Demo.Run tests" name="Should check something" time="0.001">
-    </testcase>
-  </testsuite>
-</testsuites>
