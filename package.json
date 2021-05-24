@@ -10,9 +10,11 @@
     "ac-semantic-release": "^0.2.5",
     "eslint": "^7.25.0",
     "expect": "^26.6.2",
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "mocha-jenkins-reporter": "^0.4.5"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha --bail --slow 1000 --timeout 60000 --colors test.js || :"
+    "test": "./node_modules/.bin/mocha --bail --slow 1000 --timeout 60000 --colors test.js || :",
+    "test-jenkins": "JUNIT_REPORT_PATH=./report.xml ./node_modules/.bin/mocha --colors  --bail --slow 1000 --timeout 60000 --reporter mocha-jenkins-reporter --reporter-options junit_report_name='WorkFlow Demo'"
   }
 }

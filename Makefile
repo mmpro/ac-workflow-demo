@@ -1,6 +1,13 @@
 commit:
 	@node ./node_modules/ac-semantic-release/lib/commit.js
 
+pr:
+	@echo "Title?: "; \
+    read TITLE; \
+		echo "Body?: "; \
+		read BODY
+	gh pr create --title $$(TITLE) --body $$(BODY)
+
 release:
 	@node ./node_modules/ac-semantic-release/lib/release.js	
 
