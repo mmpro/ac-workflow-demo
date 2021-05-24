@@ -25,8 +25,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
     - run: yarn run test
-    - name: Request review based on files changes and/or groups the author belongs to
-      if: success()
+    - if: success()
+      name: Request review based on files changes and/or groups the author belongs to
       uses: necojackarc/auto-request-review@v0.7.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
