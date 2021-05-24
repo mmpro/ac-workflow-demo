@@ -5,6 +5,15 @@ TBC
 
 ### Jenkins User/Token
 Create a token for your user and use it in .jenkins.conf file
+```
+JENKINS_URL=jenkins.admiralcloud.com
+JENKINS_USER_TOKEN=YOUR-USER-TOKEN-FROM-JENKINS
+JENKINS_USER=YOUR-JENKINS-USER-NAME
+# Project info from Jenkins
+JENKINS_JOB="AC-Workflow-Demo"
+JENKINS_TOKEN=JENKINS-TRIGGER-TOKEN
+```
+
 
 # Workflows
 
