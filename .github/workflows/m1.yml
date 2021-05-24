@@ -25,5 +25,3 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: EnricoMi/publish-unit-test-result-action@v1
         if: always()
-        with:
-          files: test-results/*.xml
