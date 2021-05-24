@@ -3,13 +3,20 @@
 
 CURRENT_BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
+## rebase to check that there are no conflcts
+echo "Rebasing to check if there are any conflicts"
+git fetch origin develop
+git rebase origin/develop
+
 echo "Pushing $CURRENT_BRANCH to Github"
 git push -u origin "${CURRENT_BRANCH}" --quiet  > /dev/null
 
+echo "Creating Pull Request"
 PR=$(gh pr create --base develop --fill --draft)
 PRID=${PR##*/}
-echo "Pull Request ID $PRID"
+echo "Pull Request ID # $PRID"
 
+echo "Starting Jenkins"
 set -e
 source .jenkins.conf
 

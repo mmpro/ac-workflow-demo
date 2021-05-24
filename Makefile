@@ -1,16 +1,6 @@
 commit:
 	@node ./node_modules/ac-semantic-release/lib/commit.js
 
-pr:
-	@echo "Title?: "; \
-    read TITLE; \
-		echo "Body?: "; \
-		read BODY
-	gh pr create --title $$(TITLE) --body $$(BODY)
-
-release:
-	@node ./node_modules/ac-semantic-release/lib/release.js	
-
 test-local:
 	@echo "LOCAL TESTING"
 	#rm -f error.log
@@ -19,9 +9,6 @@ test-local:
 
 lint-fix:
 	./node_modules/.bin/eslint "index.js" --fix
-
-jenkins-build:
-	./node_modules/ac-jenkins/bin/jenkins-build.sh
 
 jenkins-test:
 	@echo "JENKINS TESTING"
