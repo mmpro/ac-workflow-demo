@@ -1,7 +1,7 @@
 const _ = require('lodash')
 
 const data = {
-  p4: true
+  p7: true
 }
 
 console.log(7, _.get(data, 'p1'))
