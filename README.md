@@ -1,6 +1,6 @@
 # Project Preparation
 1. Create Project on Jenkins, create a token
-2. Create local .jenkins file with your Jenkins credentials and the product info
+2. Create local .jenkins.conf file with your Jenkins credentials and the product info
 TBC
 
 ### Jenkins User/Token
